@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E6FB5422613A0CB00965656 /* HeroAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5412613A0CB00965656 /* HeroAdapter.swift */; };
+		0E6FB54D2613A41A00965656 /* HeroType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB54C2613A41A00965656 /* HeroType.swift */; };
 		0E956CE82612486A00560496 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CE72612486A00560496 /* Reachability.swift */; };
 		0E956CF1261248CC00560496 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF0261248CC00560496 /* Endpoint.swift */; };
 		0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF82612490500560496 /* HeroesEndpoint.swift */; };
 		0E956CFF2612493700560496 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CFE2612493700560496 /* String+MD5.swift */; };
 		0E956D072612499B00560496 /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D062612499B00560496 /* Identifiable.swift */; };
-		0E956D0D26124ACB00560496 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D0C26124ACB00560496 /* Thumbnail.swift */; };
-		0E956D1526124AEB00560496 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1426124AEB00560496 /* Item.swift */; };
-		0E956D1A26124B1E00560496 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1926124B1E00560496 /* Resource.swift */; };
-		0E956D1F26124B9600560496 /* HeroComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1E26124B9600560496 /* HeroComic.swift */; };
-		0E956D2426124C1D00560496 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D2326124C1D00560496 /* Hero.swift */; };
+		0E956D0D26124ACB00560496 /* APIThumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D0C26124ACB00560496 /* APIThumbnail.swift */; };
+		0E956D1526124AEB00560496 /* APIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1426124AEB00560496 /* APIItem.swift */; };
+		0E956D1A26124B1E00560496 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1926124B1E00560496 /* APIResource.swift */; };
+		0E956D1F26124B9600560496 /* APIHeroComic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D1E26124B9600560496 /* APIHeroComic.swift */; };
+		0E956D2426124C1D00560496 /* APIHero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D2326124C1D00560496 /* APIHero.swift */; };
 		0E956D2926124CAF00560496 /* GenericServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D2826124CAF00560496 /* GenericServiceResponse.swift */; };
 		0E956D2E26124DDF00560496 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D2D26124DDF00560496 /* NetworkError.swift */; };
 		0E956D3326124E0600560496 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D3226124E0600560496 /* Requester.swift */; };
@@ -34,6 +36,9 @@
 		0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */; };
 		0EAD3CC226121A2C00756999 /* DopeSquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CC126121A2C00756999 /* DopeSquadTests.swift */; };
 		0EAD3CCD26121A2C00756999 /* DopeSquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */; };
+		0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A126125DB000404F3C /* AppAppearance.swift */; };
+		0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A926125DE000404F3C /* ImagesNames.swift */; };
+		0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,16 +59,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E6FB5412613A0CB00965656 /* HeroAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAdapter.swift; sourceTree = "<group>"; };
+		0E6FB54C2613A41A00965656 /* HeroType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroType.swift; sourceTree = "<group>"; };
 		0E956CE72612486A00560496 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0E956CF0261248CC00560496 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0E956CF82612490500560496 /* HeroesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEndpoint.swift; sourceTree = "<group>"; };
 		0E956CFE2612493700560496 /* String+MD5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		0E956D062612499B00560496 /* Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
-		0E956D0C26124ACB00560496 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
-		0E956D1426124AEB00560496 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		0E956D1926124B1E00560496 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		0E956D1E26124B9600560496 /* HeroComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComic.swift; sourceTree = "<group>"; };
-		0E956D2326124C1D00560496 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		0E956D0C26124ACB00560496 /* APIThumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIThumbnail.swift; sourceTree = "<group>"; };
+		0E956D1426124AEB00560496 /* APIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIItem.swift; sourceTree = "<group>"; };
+		0E956D1926124B1E00560496 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		0E956D1E26124B9600560496 /* APIHeroComic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeroComic.swift; sourceTree = "<group>"; };
+		0E956D2326124C1D00560496 /* APIHero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHero.swift; sourceTree = "<group>"; };
 		0E956D2826124CAF00560496 /* GenericServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericServiceResponse.swift; sourceTree = "<group>"; };
 		0E956D2D26124DDF00560496 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0E956D3226124E0600560496 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
@@ -87,6 +94,9 @@
 		0EAD3CC826121A2C00756999 /* DopeSquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopeSquadUITests.swift; sourceTree = "<group>"; };
 		0EAD3CCE26121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EF0A2A126125DB000404F3C /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
+		0EF0A2A926125DE000404F3C /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
+		0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6FB53E26139FE100965656 /* APIModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E956D0C26124ACB00560496 /* APIThumbnail.swift */,
+				0E956D1426124AEB00560496 /* APIItem.swift */,
+				0E956D1926124B1E00560496 /* APIResource.swift */,
+				0E956D1E26124B9600560496 /* APIHeroComic.swift */,
+				0E956D2326124C1D00560496 /* APIHero.swift */,
+				0E956D2826124CAF00560496 /* GenericServiceResponse.swift */,
+			);
+			path = APIModels;
+			sourceTree = "<group>";
+		};
+		0E6FB53F26139FED00965656 /* APPModels */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB54C2613A41A00965656 /* HeroType.swift */,
+			);
+			path = APPModels;
+			sourceTree = "<group>";
+		};
+		0E6FB54026139FF300965656 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB5412613A0CB00965656 /* HeroAdapter.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
 		0E956CE62612485700560496 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +179,7 @@
 				0E956CFE2612493700560496 /* String+MD5.swift */,
 				0E956D062612499B00560496 /* Identifiable.swift */,
 				0E956D3D26124FBB00560496 /* String+Localizable.swift */,
+				0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -147,12 +187,9 @@
 		0E956D0B26124AC000560496 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E956D0C26124ACB00560496 /* Thumbnail.swift */,
-				0E956D1426124AEB00560496 /* Item.swift */,
-				0E956D1926124B1E00560496 /* Resource.swift */,
-				0E956D1E26124B9600560496 /* HeroComic.swift */,
-				0E956D2326124C1D00560496 /* Hero.swift */,
-				0E956D2826124CAF00560496 /* GenericServiceResponse.swift */,
+				0E6FB54026139FF300965656 /* Adapters */,
+				0E6FB53F26139FED00965656 /* APPModels */,
+				0E6FB53E26139FE100965656 /* APIModels */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +199,7 @@
 			children = (
 				0E956D3826124F9000560496 /* LocalizableStrings.swift */,
 				0E956D422612504E00560496 /* Localizable.strings */,
+				0EF0A2A926125DE000404F3C /* ImagesNames.swift */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -207,6 +245,7 @@
 		0EAD3CA626121A2A00756999 /* DopeSquad */ = {
 			isa = PBXGroup;
 			children = (
+				0EF0A2A026125D9300404F3C /* CustomUIElements */,
 				0E956D47261251D400560496 /* Repository */,
 				0E956D3726124F7E00560496 /* Strings */,
 				0E956D0B26124AC000560496 /* Model */,
@@ -239,6 +278,14 @@
 				0EAD3CCE26121A2C00756999 /* Info.plist */,
 			);
 			path = DopeSquadUITests;
+			sourceTree = "<group>";
+		};
+		0EF0A2A026125D9300404F3C /* CustomUIElements */ = {
+			isa = PBXGroup;
+			children = (
+				0EF0A2A126125DB000404F3C /* AppAppearance.swift */,
+			);
+			path = CustomUIElements;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,27 +419,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E956D1526124AEB00560496 /* Item.swift in Sources */,
+				0E956D1526124AEB00560496 /* APIItem.swift in Sources */,
 				0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */,
 				0EAD3CB226121A2A00756999 /* DopeSquad.xcdatamodeld in Sources */,
-				0E956D1A26124B1E00560496 /* Resource.swift in Sources */,
+				0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */,
+				0E956D1A26124B1E00560496 /* APIResource.swift in Sources */,
+				0E6FB54D2613A41A00965656 /* HeroType.swift in Sources */,
+				0E6FB5422613A0CB00965656 /* HeroAdapter.swift in Sources */,
 				0E956CFF2612493700560496 /* String+MD5.swift in Sources */,
 				0E956D562612569000560496 /* LocalService.swift in Sources */,
 				0E956D3E26124FBB00560496 /* String+Localizable.swift in Sources */,
 				0EAD3CAC26121A2A00756999 /* ViewController.swift in Sources */,
 				0E956D4C2612523F00560496 /* RepositoryProtocols.swift in Sources */,
 				0E956CE82612486A00560496 /* Reachability.swift in Sources */,
-				0E956D0D26124ACB00560496 /* Thumbnail.swift in Sources */,
+				0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */,
+				0E956D0D26124ACB00560496 /* APIThumbnail.swift in Sources */,
 				0E956D2926124CAF00560496 /* GenericServiceResponse.swift in Sources */,
 				0E956D2E26124DDF00560496 /* NetworkError.swift in Sources */,
 				0E956D3326124E0600560496 /* Requester.swift in Sources */,
 				0E956D072612499B00560496 /* Identifiable.swift in Sources */,
 				0EAD3CA826121A2A00756999 /* AppDelegate.swift in Sources */,
 				0E956CF1261248CC00560496 /* Endpoint.swift in Sources */,
-				0E956D2426124C1D00560496 /* Hero.swift in Sources */,
+				0E956D2426124C1D00560496 /* APIHero.swift in Sources */,
 				0E956D3926124F9000560496 /* LocalizableStrings.swift in Sources */,
+				0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */,
 				0E956D512612539D00560496 /* MarvelService.swift in Sources */,
-				0E956D1F26124B9600560496 /* HeroComic.swift in Sources */,
+				0E956D1F26124B9600560496 /* APIHeroComic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +622,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DopeSquad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,7 +630,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.DopeSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -588,6 +641,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DopeSquad/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -595,7 +649,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.DopeSquad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

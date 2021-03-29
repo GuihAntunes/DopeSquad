@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HeroComic: Codable {
+struct APIHeroComic: Codable {
     
     var id: Int?
     var title: String?

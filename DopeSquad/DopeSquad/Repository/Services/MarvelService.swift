@@ -15,8 +15,8 @@ class MarvelService: HeroesRemoteRepositoryProtocol {
         self.requester = requester
     }
     
-    func fetchHeroesList(lastIndex index: Int, completion: @escaping RequesterResult<MarvelCharacterListResponse>) {
-        requester.request(model: MarvelCharacterListResponse.self, HeroesEndpoints.list(lastIndex: index).request, completion: completion)
+    func fetchHeroesList(lastIndex index: Int, completion: @escaping RequesterResult<APIMarvelCharacterListResponse>) {
+        requester.request(model: APIMarvelCharacterListResponse.self, HeroesEndpoints.list(lastIndex: index).request, completion: completion)
     }
     
 }

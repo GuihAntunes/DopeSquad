@@ -7,18 +7,18 @@
 
 import Foundation
 
-struct Hero: Codable {
+struct APIHero: Codable {
     
-    var id : Int?
-    var name : String?
-    var description : String?
-    var modified : String?
-    var thumbnail : Thumbnail?
-    var resourceURI : String?
-    var comics : Resource?
-    var series : Resource?
-    var stories : Resource?
-    var events : Resource?
+    var id: Int?
+    var name: String?
+    var description: String?
+    var modified: String?
+    var thumbnail: APIThumbnail?
+    var resourceURI: String?
+    var comics: APIResource?
+    var series: APIResource?
+    var stories: APIResource?
+    var events: APIResource?
     var imageData: Data? = nil
     
     init() {

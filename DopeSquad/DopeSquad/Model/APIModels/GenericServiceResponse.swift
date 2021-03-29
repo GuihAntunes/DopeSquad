@@ -7,38 +7,38 @@
 
 import Foundation
 
-struct MarvelCharacterListResponse: Codable {
+struct APIMarvelCharacterListResponse: Codable {
     
     let code: Int?
     let status: String?
     let copyright: String?
-    let data: HeroList?
+    let data: APIHeroList?
     
 }
 
-struct HeroList: Codable {
+struct APIHeroList: Codable {
     
     let offset: Int?
     let limit: Int?
     let total: Int?
     let count: Int?
-    let results: [Hero]?
+    let results: [APIHero]?
     
 }
 
-struct MarvelCharacterDetailsResponse: Codable {
+struct APIMarvelCharacterDetailsResponse: Codable {
     
     let code: Int?
     let status: String?
     let copyright: String?
-    let data: DetailsList?
+    let data: APIDetailsList?
     
 }
 
-struct DetailsList: Codable {
+struct APIDetailsList: Codable {
     let offset: Int?
     let limit: Int?
     let total: Int?
     let count: Int?
-    let results: [HeroComic]?
+    let results: [APIHeroComic]?
 }

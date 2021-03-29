@@ -12,6 +12,8 @@ enum LocalizableStrings: String {
     // MARK: - View Elements Strings
     case confirmButtonTitle = "confirmButton_title"
     case backButtonTitle = "backButton_title"
+    case unknownHeroName = "unknownHero_name"
+    case unknownHeroDescription = "unknownHero_description"
     
     // MARK: - Error Messages
     case genericErrorTitle = "genericError_title"

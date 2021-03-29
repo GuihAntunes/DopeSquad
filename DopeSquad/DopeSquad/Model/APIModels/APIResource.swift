@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct Resource : Codable {
+struct APIResource : Codable {
     
     let available : Int?
     let collectionURI : String?
-    let items : [Item]?
+    let items : [APIItem]?
     let returned : Int?
 
 }

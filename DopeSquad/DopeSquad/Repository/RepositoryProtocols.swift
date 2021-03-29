@@ -8,13 +8,13 @@
 import UIKit
 
 protocol HeroesRemoteRepositoryProtocol: class {
-    func fetchHeroesList(lastIndex index: Int, completion: @escaping RequesterResult<MarvelCharacterListResponse>)
+    func fetchHeroesList(lastIndex index: Int, completion: @escaping RequesterResult<APIMarvelCharacterListResponse>)
 }
 
 protocol HeroesLocalRepositoryProtocol: class {
-    func recruitHeroToSquad(_ hero: Hero, withThumbnail thumbnail: UIImage?)
-    func removeHeroFromSquad(_ hero: Hero)
-    func retriveSquad() -> [Hero]
+    func recruitHeroToSquad(_ hero: APIHero, withThumbnail thumbnail: UIImage?)
+    func removeHeroFromSquad(_ hero: APIHero)
+    func retriveSquad() -> [APIHero]
 }
 
 protocol HeroesRepositoryProtocol: HeroesRemoteRepositoryProtocol & HeroesLocalRepositoryProtocol {  }

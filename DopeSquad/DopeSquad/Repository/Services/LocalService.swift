@@ -15,7 +15,7 @@ class LocalService: HeroesLocalRepositoryProtocol {
         return appDelegate.persistentContainer.viewContext
     }
     
-    func recruitHeroToSquad(_ hero: Hero, withThumbnail thumbnail: UIImage?) {
+    func recruitHeroToSquad(_ hero: APIHero, withThumbnail thumbnail: UIImage?) {
         guard let context = context, let heroEntity = NSEntityDescription.entity(forEntityName: "CoreDataHero", in: context) else { return }
         let coreHero = NSManagedObject(entity: heroEntity, insertInto: context)
         coreHero.setValue(hero.name, forKey: "name")
@@ -31,7 +31,7 @@ class LocalService: HeroesLocalRepositoryProtocol {
         }
     }
     
-    func removeHeroFromSquad(_ hero: Hero) {
+    func removeHeroFromSquad(_ hero: APIHero) {
         DispatchQueue.main.async {
             guard let context = self.context else { return }
             let heroFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataHero")
@@ -49,8 +49,8 @@ class LocalService: HeroesLocalRepositoryProtocol {
         }
     }
     
-    func retriveSquad() -> [Hero] {
-        var heroes: [Hero] = .init()
+    func retriveSquad() -> [APIHero] {
+        var heroes: [APIHero] = .init()
         guard let context = self.context else {
             return .init()
         }
@@ -60,7 +60,7 @@ class LocalService: HeroesLocalRepositoryProtocol {
                 return .init()
             }
             for data in result {
-                var hero = Hero()
+                var hero = APIHero()
                 hero.id = data.value(forKey: "id") as? Int
                 hero.name = data.value(forKey: "name") as? String
                 hero.imageData = data.value(forKey: "image") as? Data

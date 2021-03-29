@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Item : Codable {
+struct APIItem : Codable {
     
     let resourceURI : String?
     let name : String?

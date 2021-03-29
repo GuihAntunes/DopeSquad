@@ -9,6 +9,8 @@
 // MARK: - View Elements Strings
 "confirmButton_title" = "Ok";
 "backButton_title" = "Back";
+"unknownHero_description" = "Nothing on our records";
+"unknownHero_name" = "Unknown Hero";
 
 // MARK: - Error Messages
 "genericError_title" = "Error";
