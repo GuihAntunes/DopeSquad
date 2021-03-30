@@ -15,11 +15,12 @@ class LocalService: HeroesLocalRepositoryProtocol {
         return appDelegate.persistentContainer.viewContext
     }
     
-    func recruitHeroToSquad(_ hero: APIHero, withThumbnail thumbnail: UIImage?) {
+    func recruitHeroToSquad(_ hero: HeroType, withThumbnail thumbnail: UIImage?) {
         guard let context = context, let heroEntity = NSEntityDescription.entity(forEntityName: "CoreDataHero", in: context) else { return }
         let coreHero = NSManagedObject(entity: heroEntity, insertInto: context)
         coreHero.setValue(hero.name, forKey: "name")
         coreHero.setValue(hero.id, forKey: "id")
+        coreHero.setValue(hero.biography, forKey: "biography")
         if let imageData = thumbnail?.pngData() {
             coreHero.setValue(imageData, forKey: "image")
         }
@@ -31,12 +32,12 @@ class LocalService: HeroesLocalRepositoryProtocol {
         }
     }
     
-    func removeHeroFromSquad(_ hero: APIHero) {
+    func removeHeroFromSquad(heroID id: Int) {
         DispatchQueue.main.async {
             guard let context = self.context else { return }
             let heroFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataHero")
-
-            heroFetchRequest.predicate = NSPredicate(format: "id = %i", hero.id ?? .init())
+            
+            heroFetchRequest.predicate = NSPredicate(format: "id = %i", id)
             
             guard let heroToDelete = try? context.fetch(heroFetchRequest).first as? NSManagedObject else { return }
             context.delete(heroToDelete)
@@ -49,8 +50,8 @@ class LocalService: HeroesLocalRepositoryProtocol {
         }
     }
     
-    func retriveSquad() -> [APIHero] {
-        var heroes: [APIHero] = .init()
+    func retriveSquad() -> [HeroType] {
+        var heroes: [HeroType] = .init()
         guard let context = self.context else {
             return .init()
         }
@@ -61,10 +62,16 @@ class LocalService: HeroesLocalRepositoryProtocol {
             }
             for data in result {
                 var hero = APIHero()
-                hero.id = data.value(forKey: "id") as? Int
-                hero.name = data.value(forKey: "name") as? String
-                hero.imageData = data.value(forKey: "image") as? Data
-                heroes.append(hero)
+                if let id = data.value(forKey: "id") as? Int,
+                   let name = data.value(forKey: "name") as? String,
+                   let imageData = data.value(forKey: "image") as? Data,
+                   let biography = data.value(forKey: "biography") as? String {
+                    hero.id = id
+                    hero.name = name
+                    hero.imageData = imageData
+                    hero.description = biography
+                    heroes.append(HeroAdapter(withAPIHero: hero))
+                }
             }
             
             return heroes

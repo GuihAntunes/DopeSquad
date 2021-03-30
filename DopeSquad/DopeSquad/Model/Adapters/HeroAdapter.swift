@@ -31,4 +31,8 @@ extension HeroAdapter: HeroType {
         return hero.thumbnail?.path ?? ""
     }
     
+    var id: Int {
+        return hero.id
+    }
+    
 }

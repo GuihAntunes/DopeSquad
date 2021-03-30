@@ -12,9 +12,14 @@ protocol HeroesRemoteRepositoryProtocol: class {
 }
 
 protocol HeroesLocalRepositoryProtocol: class {
-    func recruitHeroToSquad(_ hero: APIHero, withThumbnail thumbnail: UIImage?)
-    func removeHeroFromSquad(_ hero: APIHero)
-    func retriveSquad() -> [APIHero]
+    func recruitHeroToSquad(_ hero: HeroType, withThumbnail thumbnail: UIImage?)
+    func removeHeroFromSquad(heroID id: Int)
+    func retriveSquad() -> [HeroType]
 }
 
-protocol HeroesRepositoryProtocol: HeroesRemoteRepositoryProtocol & HeroesLocalRepositoryProtocol {  }
+protocol HeroesRepositoryProtocol: class {
+    func fetchHeroesList(lastIndex index: Int, completion: @escaping (Result<[HeroType], NetworkError>) -> Void)
+    func recruitHeroToSquad(_ hero: HeroType, withThumbnail thumbnail: UIImage?)
+    func removeHeroFromSquad(_ hero: HeroType)
+    func retriveSquad() -> [HeroType]
+}

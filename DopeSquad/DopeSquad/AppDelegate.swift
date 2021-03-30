@@ -12,6 +12,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var coordinator: AppCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         return didSetupApp()
@@ -25,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
         
-//        coordinator = AppCoordinator(window: window)
-//        coordinator?.start()
+        coordinator = AppCoordinator(window: window)
+        coordinator?.start()
         AppAppearance.setAppAppearance()
         return true
     }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E6FB5422613A0CB00965656 /* HeroAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5412613A0CB00965656 /* HeroAdapter.swift */; };
 		0E6FB54D2613A41A00965656 /* HeroType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB54C2613A41A00965656 /* HeroType.swift */; };
+		0E6FB5592613A59200965656 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5582613A59200965656 /* AppCoordinator.swift */; };
+		0E6FB55E2613A5E800965656 /* AppCoordinatorDependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB55D2613A5E800965656 /* AppCoordinatorDependencyInjector.swift */; };
+		0E6FB5642613A6D300965656 /* HeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5632613A6D300965656 /* HeroesRepository.swift */; };
 		0E956CE82612486A00560496 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CE72612486A00560496 /* Reachability.swift */; };
 		0E956CF1261248CC00560496 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF0261248CC00560496 /* Endpoint.swift */; };
 		0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF82612490500560496 /* HeroesEndpoint.swift */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		0E6FB5412613A0CB00965656 /* HeroAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAdapter.swift; sourceTree = "<group>"; };
 		0E6FB54C2613A41A00965656 /* HeroType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroType.swift; sourceTree = "<group>"; };
+		0E6FB5582613A59200965656 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0E6FB55D2613A5E800965656 /* AppCoordinatorDependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDependencyInjector.swift; sourceTree = "<group>"; };
+		0E6FB5632613A6D300965656 /* HeroesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepository.swift; sourceTree = "<group>"; };
 		0E956CE72612486A00560496 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0E956CF0261248CC00560496 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0E956CF82612490500560496 /* HeroesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEndpoint.swift; sourceTree = "<group>"; };
@@ -153,6 +159,23 @@
 			path = Adapters;
 			sourceTree = "<group>";
 		};
+		0E6FB5572613A57D00965656 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB5582613A59200965656 /* AppCoordinator.swift */,
+				0E6FB55D2613A5E800965656 /* AppCoordinatorDependencyInjector.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0E6FB5622613A6BF00965656 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB5632613A6D300965656 /* HeroesRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 		0E956CE62612485700560496 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,8 +230,9 @@
 		0E956D47261251D400560496 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				0E956D5A2612586F00560496 /* Services */,
 				0E956D4B2612523F00560496 /* RepositoryProtocols.swift */,
+				0E6FB5622613A6BF00965656 /* Repositories */,
+				0E956D5A2612586F00560496 /* Services */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -245,6 +269,7 @@
 		0EAD3CA626121A2A00756999 /* DopeSquad */ = {
 			isa = PBXGroup;
 			children = (
+				0E6FB5572613A57D00965656 /* Coordinator */,
 				0EF0A2A026125D9300404F3C /* CustomUIElements */,
 				0E956D47261251D400560496 /* Repository */,
 				0E956D3726124F7E00560496 /* Strings */,
@@ -425,6 +450,8 @@
 				0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */,
 				0E956D1A26124B1E00560496 /* APIResource.swift in Sources */,
 				0E6FB54D2613A41A00965656 /* HeroType.swift in Sources */,
+				0E6FB5642613A6D300965656 /* HeroesRepository.swift in Sources */,
+				0E6FB5592613A59200965656 /* AppCoordinator.swift in Sources */,
 				0E6FB5422613A0CB00965656 /* HeroAdapter.swift in Sources */,
 				0E956CFF2612493700560496 /* String+MD5.swift in Sources */,
 				0E956D562612569000560496 /* LocalService.swift in Sources */,
@@ -441,6 +468,7 @@
 				0EAD3CA826121A2A00756999 /* AppDelegate.swift in Sources */,
 				0E956CF1261248CC00560496 /* Endpoint.swift in Sources */,
 				0E956D2426124C1D00560496 /* APIHero.swift in Sources */,
+				0E6FB55E2613A5E800965656 /* AppCoordinatorDependencyInjector.swift in Sources */,
 				0E956D3926124F9000560496 /* LocalizableStrings.swift in Sources */,
 				0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */,
 				0E956D512612539D00560496 /* MarvelService.swift in Sources */,

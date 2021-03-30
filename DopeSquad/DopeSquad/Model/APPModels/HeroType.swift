@@ -8,6 +8,7 @@
 import Foundation
 
 protocol HeroType {
+    var id: Int { get }
     var name: String { get }
     var biography: String { get }
     var thumbnail: String { get }
