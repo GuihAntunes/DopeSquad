@@ -12,6 +12,7 @@
 		0E6FB5592613A59200965656 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5582613A59200965656 /* AppCoordinator.swift */; };
 		0E6FB55E2613A5E800965656 /* AppCoordinatorDependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB55D2613A5E800965656 /* AppCoordinatorDependencyInjector.swift */; };
 		0E6FB5642613A6D300965656 /* HeroesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB5632613A6D300965656 /* HeroesRepository.swift */; };
+		0E6FB56D2613B18E00965656 /* HeroesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6FB56C2613B18E00965656 /* HeroesListViewModel.swift */; };
 		0E956CE82612486A00560496 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CE72612486A00560496 /* Reachability.swift */; };
 		0E956CF1261248CC00560496 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF0261248CC00560496 /* Endpoint.swift */; };
 		0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956CF82612490500560496 /* HeroesEndpoint.swift */; };
@@ -39,6 +40,7 @@
 		0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */; };
 		0EAD3CC226121A2C00756999 /* DopeSquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CC126121A2C00756999 /* DopeSquadTests.swift */; };
 		0EAD3CCD26121A2C00756999 /* DopeSquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */; };
+		0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */; };
 		0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A126125DB000404F3C /* AppAppearance.swift */; };
 		0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A926125DE000404F3C /* ImagesNames.swift */; };
 		0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */; };
@@ -67,6 +69,7 @@
 		0E6FB5582613A59200965656 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		0E6FB55D2613A5E800965656 /* AppCoordinatorDependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorDependencyInjector.swift; sourceTree = "<group>"; };
 		0E6FB5632613A6D300965656 /* HeroesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesRepository.swift; sourceTree = "<group>"; };
+		0E6FB56C2613B18E00965656 /* HeroesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModel.swift; sourceTree = "<group>"; };
 		0E956CE72612486A00560496 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0E956CF0261248CC00560496 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0E956CF82612490500560496 /* HeroesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesEndpoint.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		0EAD3CC826121A2C00756999 /* DopeSquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopeSquadUITests.swift; sourceTree = "<group>"; };
 		0EAD3CCE26121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0EF0A2A126125DB000404F3C /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		0EF0A2A926125DE000404F3C /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
 		0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
@@ -174,6 +178,39 @@
 				0E6FB5632613A6D300965656 /* HeroesRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		0E6FB56B2613B18200965656 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB56C2613B18E00965656 /* HeroesListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E6FB5772613B9B200965656 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB5782613B9B800965656 /* HeroesList */,
+				0ED22BD72613C368002FE20A /* HeroDetail */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		0E6FB5782613B9B800965656 /* HeroesList */ = {
+			isa = PBXGroup;
+			children = (
+				0E6FB5792613B9C200965656 /* View */,
+				0E6FB56B2613B18200965656 /* ViewModel */,
+			);
+			path = HeroesList;
+			sourceTree = "<group>";
+		};
+		0E6FB5792613B9C200965656 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0E956CE62612485700560496 /* Network */ = {
@@ -269,6 +306,7 @@
 		0EAD3CA626121A2A00756999 /* DopeSquad */ = {
 			isa = PBXGroup;
 			children = (
+				0E6FB5772613B9B200965656 /* Features */,
 				0E6FB5572613A57D00965656 /* Coordinator */,
 				0EF0A2A026125D9300404F3C /* CustomUIElements */,
 				0E956D47261251D400560496 /* Repository */,
@@ -303,6 +341,30 @@
 				0EAD3CCE26121A2C00756999 /* Info.plist */,
 			);
 			path = DopeSquadUITests;
+			sourceTree = "<group>";
+		};
+		0ED22BD72613C368002FE20A /* HeroDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0ED22BDD2613C383002FE20A /* View */,
+				0ED22BDC2613C37D002FE20A /* ViewModel */,
+			);
+			path = HeroDetail;
+			sourceTree = "<group>";
+		};
+		0ED22BDC2613C37D002FE20A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0ED22BDD2613C383002FE20A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0EF0A2A026125D9300404F3C /* CustomUIElements */ = {
@@ -462,6 +524,7 @@
 				0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */,
 				0E956D0D26124ACB00560496 /* APIThumbnail.swift in Sources */,
 				0E956D2926124CAF00560496 /* GenericServiceResponse.swift in Sources */,
+				0E6FB56D2613B18E00965656 /* HeroesListViewModel.swift in Sources */,
 				0E956D2E26124DDF00560496 /* NetworkError.swift in Sources */,
 				0E956D3326124E0600560496 /* Requester.swift in Sources */,
 				0E956D072612499B00560496 /* Identifiable.swift in Sources */,
@@ -471,6 +534,7 @@
 				0E6FB55E2613A5E800965656 /* AppCoordinatorDependencyInjector.swift in Sources */,
 				0E956D3926124F9000560496 /* LocalizableStrings.swift in Sources */,
 				0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */,
+				0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */,
 				0E956D512612539D00560496 /* MarvelService.swift in Sources */,
 				0E956D1F26124B9600560496 /* APIHeroComic.swift in Sources */,
 			);

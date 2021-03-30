@@ -8,10 +8,19 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let repository = HeroesRepository()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        repository.fetchHeroesList(lastIndex: 0) { (result) in
+            switch result {
+            case .success(let heroes):
+                print(heroes)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
 

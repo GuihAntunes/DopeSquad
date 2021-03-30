@@ -22,4 +22,21 @@ class AppCoordinatorDependencyInjector {
         return navigation
     }()
     
+    // MARK: - View Controllers
+    
+    
+    func getHeroDetailViewController<T: Codable>(withModel model: T) {
+        
+    }
+    
+    // MARK: - View Models
+    private lazy var heroListViewModel: HeroesListViewModel = {
+        return HeroesListViewModel(withRepository: heroesRepository)
+    }()
+    
+    // MARK: - Repositories
+    private lazy var heroesRepository: HeroesRepositoryProtocol = {
+        return HeroesRepository()
+    }()
+    
 }
