@@ -17,8 +17,6 @@ class AppAppearance {
     static func setAppBackgroundColor() {
         let subviewsBackgroundColor = UIColor(named: UIColor.AppColors.appBackgroundColor.rawValue)
         UITableView.appearance().backgroundColor = subviewsBackgroundColor
-        UICollectionView.appearance().backgroundColor = subviewsBackgroundColor
-        UITableViewCell.appearance().backgroundColor = UIColor(named: UIColor.AppColors.cellBackgroundColor.rawValue)
     }
     
     static func setLabelsAppeareance() {

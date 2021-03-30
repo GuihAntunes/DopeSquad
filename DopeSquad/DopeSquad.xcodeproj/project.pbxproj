@@ -33,12 +33,19 @@
 		0E956D512612539D00560496 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D502612539D00560496 /* MarvelService.swift */; };
 		0E956D562612569000560496 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E956D552612569000560496 /* LocalService.swift */; };
 		0EAD3CA826121A2A00756999 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CA726121A2A00756999 /* AppDelegate.swift */; };
-		0EAD3CAC26121A2A00756999 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CAB26121A2A00756999 /* ViewController.swift */; };
 		0EAD3CAF26121A2A00756999 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CAD26121A2A00756999 /* Main.storyboard */; };
 		0EAD3CB226121A2A00756999 /* DopeSquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB026121A2A00756999 /* DopeSquad.xcdatamodeld */; };
 		0EAD3CB426121A2C00756999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB326121A2C00756999 /* Assets.xcassets */; };
 		0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */; };
 		0EADBBC62613D7E8009D2976 /* HeroDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBBC52613D7E8009D2976 /* HeroDetailViewModelTests.swift */; };
+		0EADBBCC2613DAE8009D2976 /* HeroesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBBCB2613DAE8009D2976 /* HeroesListViewController.swift */; };
+		0EADBC3E2613DE94009D2976 /* UIViewController+ReusableElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC3D2613DE94009D2976 /* UIViewController+ReusableElements.swift */; };
+		0EADBC432613E0D4009D2976 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC412613E0D4009D2976 /* HeroTableViewCell.swift */; };
+		0EADBC442613E0D4009D2976 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EADBC422613E0D4009D2976 /* HeroTableViewCell.xib */; };
+		0EADBC482613E373009D2976 /* ImageDownloaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC472613E373009D2976 /* ImageDownloaderTableViewCell.swift */; };
+		0EADBC4C2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */; };
+		0EADBC502613E477009D2976 /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC4F2613E477009D2976 /* UIView+RoundedCorners.swift */; };
+		0EADBC542613E579009D2976 /* HeroesListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */; };
 		0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */; };
 		0ED22BEE2613CC46002FE20A /* HeroesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */; };
 		0ED22BF22613CD68002FE20A /* TestsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BF12613CD68002FE20A /* TestsUtils.swift */; };
@@ -87,7 +94,6 @@
 		0E956D552612569000560496 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		0EAD3CA426121A2A00756999 /* DopeSquad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DopeSquad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CA726121A2A00756999 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0EAD3CAB26121A2A00756999 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EAD3CAE26121A2A00756999 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EAD3CB126121A2A00756999 /* DopeSquad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DopeSquad.xcdatamodel; sourceTree = "<group>"; };
 		0EAD3CB326121A2C00756999 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +102,14 @@
 		0EAD3CBD26121A2C00756999 /* DopeSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CC326121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EADBBC52613D7E8009D2976 /* HeroDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModelTests.swift; sourceTree = "<group>"; };
+		0EADBBCB2613DAE8009D2976 /* HeroesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewController.swift; sourceTree = "<group>"; };
+		0EADBC3D2613DE94009D2976 /* UIViewController+ReusableElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ReusableElements.swift"; sourceTree = "<group>"; };
+		0EADBC412613E0D4009D2976 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		0EADBC422613E0D4009D2976 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		0EADBC472613E373009D2976 /* ImageDownloaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTableViewCell.swift; sourceTree = "<group>"; };
+		0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderOperationQueue.swift; sourceTree = "<group>"; };
+		0EADBC4F2613E477009D2976 /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
+		0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesListViewController+TableView.swift"; sourceTree = "<group>"; };
 		0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0ED22BEC2613CC46002FE20A /* DopeSquadTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DopeSquadTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModelTests.swift; sourceTree = "<group>"; };
@@ -200,6 +214,9 @@
 		0E6FB5792613B9C200965656 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EADBC572613E57E009D2976 /* ReusableCells */,
+				0EADBBCB2613DAE8009D2976 /* HeroesListViewController.swift */,
+				0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +248,8 @@
 				0E956D062612499B00560496 /* Identifiable.swift */,
 				0E956D3D26124FBB00560496 /* String+Localizable.swift */,
 				0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */,
+				0EADBC3D2613DE94009D2976 /* UIViewController+ReusableElements.swift */,
+				0EADBC4F2613E477009D2976 /* UIView+RoundedCorners.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,12 +323,12 @@
 				0E956CFD2612492C00560496 /* Extensions */,
 				0E956CE62612485700560496 /* Network */,
 				0EAD3CA726121A2A00756999 /* AppDelegate.swift */,
-				0EAD3CAB26121A2A00756999 /* ViewController.swift */,
 				0EAD3CAD26121A2A00756999 /* Main.storyboard */,
 				0EAD3CB326121A2C00756999 /* Assets.xcassets */,
 				0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */,
 				0EAD3CB826121A2C00756999 /* Info.plist */,
 				0EAD3CB026121A2A00756999 /* DopeSquad.xcdatamodeld */,
+				0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */,
 			);
 			path = DopeSquad;
 			sourceTree = "<group>";
@@ -323,6 +342,15 @@
 				0EAD3CC326121A2C00756999 /* Info.plist */,
 			);
 			path = DopeSquadTests;
+			sourceTree = "<group>";
+		};
+		0EADBC572613E57E009D2976 /* ReusableCells */ = {
+			isa = PBXGroup;
+			children = (
+				0EADBC412613E0D4009D2976 /* HeroTableViewCell.swift */,
+				0EADBC422613E0D4009D2976 /* HeroTableViewCell.xib */,
+			);
+			path = ReusableCells;
 			sourceTree = "<group>";
 		};
 		0ED22BD72613C368002FE20A /* HeroDetail */ = {
@@ -380,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				0EF0A2A126125DB000404F3C /* AppAppearance.swift */,
+				0EADBC472613E373009D2976 /* ImageDownloaderTableViewCell.swift */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -467,6 +496,7 @@
 			files = (
 				0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */,
 				0E956D432612504E00560496 /* Localizable.strings in Resources */,
+				0EADBC442613E0D4009D2976 /* HeroTableViewCell.xib in Resources */,
 				0EAD3CB426121A2C00756999 /* Assets.xcassets in Resources */,
 				0EAD3CAF26121A2A00756999 /* Main.storyboard in Resources */,
 			);
@@ -489,6 +519,7 @@
 			files = (
 				0E956D1526124AEB00560496 /* APIItem.swift in Sources */,
 				0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */,
+				0EADBC4C2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift in Sources */,
 				0EAD3CB226121A2A00756999 /* DopeSquad.xcdatamodeld in Sources */,
 				0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */,
 				0E956D1A26124B1E00560496 /* APIResource.swift in Sources */,
@@ -499,13 +530,15 @@
 				0E956CFF2612493700560496 /* String+MD5.swift in Sources */,
 				0E956D562612569000560496 /* LocalService.swift in Sources */,
 				0E956D3E26124FBB00560496 /* String+Localizable.swift in Sources */,
-				0EAD3CAC26121A2A00756999 /* ViewController.swift in Sources */,
 				0E956D4C2612523F00560496 /* RepositoryProtocols.swift in Sources */,
 				0E956CE82612486A00560496 /* Reachability.swift in Sources */,
+				0EADBC502613E477009D2976 /* UIView+RoundedCorners.swift in Sources */,
 				0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */,
+				0EADBC542613E579009D2976 /* HeroesListViewController+TableView.swift in Sources */,
 				0E956D0D26124ACB00560496 /* APIThumbnail.swift in Sources */,
 				0E956D2926124CAF00560496 /* GenericServiceResponse.swift in Sources */,
 				0E6FB56D2613B18E00965656 /* HeroesListViewModel.swift in Sources */,
+				0EADBC482613E373009D2976 /* ImageDownloaderTableViewCell.swift in Sources */,
 				0E956D2E26124DDF00560496 /* NetworkError.swift in Sources */,
 				0E956D3326124E0600560496 /* Requester.swift in Sources */,
 				0E956D072612499B00560496 /* Identifiable.swift in Sources */,
@@ -513,10 +546,13 @@
 				0E956CF1261248CC00560496 /* Endpoint.swift in Sources */,
 				0E956D2426124C1D00560496 /* APIHero.swift in Sources */,
 				0E6FB55E2613A5E800965656 /* AppCoordinatorDependencyInjector.swift in Sources */,
+				0EADBBCC2613DAE8009D2976 /* HeroesListViewController.swift in Sources */,
 				0E956D3926124F9000560496 /* LocalizableStrings.swift in Sources */,
 				0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */,
 				0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */,
 				0E956D512612539D00560496 /* MarvelService.swift in Sources */,
+				0EADBC432613E0D4009D2976 /* HeroTableViewCell.swift in Sources */,
+				0EADBC3E2613DE94009D2976 /* UIViewController+ReusableElements.swift in Sources */,
 				0E956D1F26124B9600560496 /* APIHeroComic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

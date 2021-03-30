@@ -20,16 +20,18 @@ class HeroesRepository: HeroesRepositoryProtocol {
     func fetchHeroesList(lastIndex index: Int, completion: @escaping (Result<[HeroType], NetworkError>) -> Void) {
         DispatchQueue.global().async { [weak self] in
             self?.remoteService.fetchHeroesList(lastIndex: index) { result in
-                switch result {
-                case .success(let response):
-                    guard let heroes = response.data?.results else {
-                        completion(.failure(.generalError(error: LocalizableStrings.genericErrorMessage.localize())))
-                        return
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let response):
+                        guard let heroes = response.data?.results else {
+                            completion(.failure(.generalError(error: LocalizableStrings.genericErrorMessage.localize())))
+                            return
+                        }
+                        
+                        completion(.success(heroes.map({ HeroAdapter(withAPIHero: $0) })))
+                    case .failure(let error):
+                        completion(.failure(error))
                     }
-                    
-                    completion(.success(heroes.map({ HeroAdapter(withAPIHero: $0) })))
-                case .failure(let error):
-                    completion(.failure(error))
                 }
             }
         }

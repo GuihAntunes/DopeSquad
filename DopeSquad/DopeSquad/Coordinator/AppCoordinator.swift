@@ -8,7 +8,7 @@
 import UIKit
 
 protocol AppCoordinatorProtocol: class {
-    func presentNextStep<T: Codable>(withModel model: T?)
+    func presentNextStep(withModel model: HeroType)
     func presentPreviousStep()
 }
 
@@ -37,7 +37,7 @@ class AppCoordinator: AppCoordinatorProtocol {
         
     }
     
-    func presentNextStep<T: Codable>(withModel model: T? = nil) {
+    func presentNextStep(withModel model: HeroType) {
             switch state {
             case .list:
                 state = .detail

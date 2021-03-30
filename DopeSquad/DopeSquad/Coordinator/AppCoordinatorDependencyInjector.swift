@@ -18,14 +18,17 @@ class AppCoordinatorDependencyInjector {
     // MARK: - Main Navigation
     lazy var navigationController: UINavigationController = {
         let navigation: UINavigationController = .init()
-        navigation.setNavigationBarHidden(true, animated: false)
+        navigation.viewControllers.append(heroesListViewController)
         return navigation
     }()
     
     // MARK: - View Controllers
+    private lazy var heroesListViewController: UIViewController = {
+        return HeroesListViewController(withViewModel: heroesListViewModel, andCoordinator: appCoordinator)
+    }()
     
     // MARK: - View Models
-    private lazy var heroListViewModel: HeroesListViewModel = {
+    private lazy var heroesListViewModel: HeroesListViewModel = {
         return HeroesListViewModel(withRepository: heroesRepository)
     }()
     
@@ -39,8 +42,8 @@ class AppCoordinatorDependencyInjector {
     }()
     
     // MARK: - Injector Methods
-    func getHeroDetailViewController<T: Codable>(withModel model: T) -> UIViewController {
-        heroDetailViewModel.selectedHero = model as? HeroType
+    func getDetailViewController<T: HeroType>(withModel model: T) -> UIViewController {
+        heroDetailViewModel.selectedHero = model
         return .init()
     }
     

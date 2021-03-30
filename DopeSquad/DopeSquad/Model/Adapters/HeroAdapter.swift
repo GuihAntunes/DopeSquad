@@ -28,7 +28,8 @@ extension HeroAdapter: HeroType {
     }
     
     var thumbnail: String {
-        return hero.thumbnail?.path ?? ""
+        guard let path = hero.thumbnail?.path, let pathExtension = hero.thumbnail?.thumbnailExtension else { return .init() }
+        return String(format: "%@.%@", path, pathExtension)
     }
     
     var id: Int {
