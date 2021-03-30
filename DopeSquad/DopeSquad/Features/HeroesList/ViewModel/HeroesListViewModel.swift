@@ -29,7 +29,8 @@ class HeroesListViewModel: HeroesListViewModelProtocol {
             guard let self = self else { return }
             switch result {
             case .success(let heroes):
-                self.heroes = heroes
+                self.heroes.append(contentsOf: heroes)
+                self.lastIndex = self.heroes.count
                 completion(.success(true))
             case .failure(let error):
                 completion(.failure(error))

@@ -57,7 +57,7 @@ class HeroesListViewModelTests: XCTestCase {
         }
     }
     
-    func testSuccessScenario_shouldReturnABiggerListOfHeroes() {
+    func testSuccessScenarioForPagination_shouldReturnABiggerListOfHeroes() {
         sut.loadContent { result in
             switch result {
             case .success(let success):

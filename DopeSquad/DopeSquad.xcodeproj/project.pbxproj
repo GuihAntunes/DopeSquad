@@ -38,6 +38,7 @@
 		0EAD3CB226121A2A00756999 /* DopeSquad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB026121A2A00756999 /* DopeSquad.xcdatamodeld */; };
 		0EAD3CB426121A2C00756999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB326121A2C00756999 /* Assets.xcassets */; };
 		0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */; };
+		0EADBBC62613D7E8009D2976 /* HeroDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBBC52613D7E8009D2976 /* HeroDetailViewModelTests.swift */; };
 		0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */; };
 		0ED22BEE2613CC46002FE20A /* HeroesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */; };
 		0ED22BF22613CD68002FE20A /* TestsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BF12613CD68002FE20A /* TestsUtils.swift */; };
@@ -94,6 +95,7 @@
 		0EAD3CB826121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EAD3CBD26121A2C00756999 /* DopeSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CC326121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EADBBC52613D7E8009D2976 /* HeroDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModelTests.swift; sourceTree = "<group>"; };
 		0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0ED22BEC2613CC46002FE20A /* DopeSquadTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DopeSquadTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModelTests.swift; sourceTree = "<group>"; };
@@ -351,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */,
+				0EADBBC52613D7E8009D2976 /* HeroDetailViewModelTests.swift */,
 				0ED22BEC2613CC46002FE20A /* DopeSquadTests-Bridging-Header.h */,
 			);
 			path = ViewModelsTests;
@@ -523,6 +526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED22BF72613CDC4002FE20A /* HeroAdapterTests.swift in Sources */,
+				0EADBBC62613D7E8009D2976 /* HeroDetailViewModelTests.swift in Sources */,
 				0ED22BEE2613CC46002FE20A /* HeroesListViewModelTests.swift in Sources */,
 				0ED22BF22613CD68002FE20A /* TestsUtils.swift in Sources */,
 			);
