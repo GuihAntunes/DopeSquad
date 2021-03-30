@@ -18,7 +18,7 @@ class HeroDetailViewModel: HeroDetailViewModelProtocol {
     
     var repository: HeroesRepositoryProtocol
     var hero: HeroType = HeroAdapter(withAPIHero: .init())
-    var isSquadMember: Bool = false
+    lazy var isSquadMember: Bool = repository.retriveSquad().contains { $0.id == hero.id }
     var selectedHero: HeroType? {
         didSet {
             guard let hero = selectedHero else { return }
@@ -28,7 +28,6 @@ class HeroDetailViewModel: HeroDetailViewModelProtocol {
     
     init(withRepository repository: HeroesRepositoryProtocol) {
         self.repository = repository
-        setSquadSituation()
     }
     
     func recruitHeroToSquad(withImage image: UIImage?) {
@@ -37,9 +36,5 @@ class HeroDetailViewModel: HeroDetailViewModelProtocol {
     
     func removeHeroFromSquad() {
         repository.removeHeroFromSquad(hero)
-    }
-    
-    private func setSquadSituation() {
-        isSquadMember = repository.retriveSquad().contains { $0.id == hero.id }
     }
 }
