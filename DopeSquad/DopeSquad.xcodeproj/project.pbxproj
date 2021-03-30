@@ -39,7 +39,6 @@
 		0EAD3CB426121A2C00756999 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB326121A2C00756999 /* Assets.xcassets */; };
 		0EAD3CB726121A2C00756999 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */; };
 		0EAD3CC226121A2C00756999 /* DopeSquadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CC126121A2C00756999 /* DopeSquadTests.swift */; };
-		0EAD3CCD26121A2C00756999 /* DopeSquadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */; };
 		0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */; };
 		0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A126125DB000404F3C /* AppAppearance.swift */; };
 		0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A926125DE000404F3C /* ImagesNames.swift */; };
@@ -48,13 +47,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		0EAD3CBE26121A2C00756999 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0EAD3C9C26121A2A00756999 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EAD3CA326121A2A00756999;
-			remoteInfo = DopeSquad;
-		};
-		0EAD3CC926121A2C00756999 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0EAD3C9C26121A2A00756999 /* Project object */;
 			proxyType = 1;
@@ -100,9 +92,6 @@
 		0EAD3CBD26121A2C00756999 /* DopeSquadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EAD3CC126121A2C00756999 /* DopeSquadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopeSquadTests.swift; sourceTree = "<group>"; };
 		0EAD3CC326121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EAD3CC826121A2C00756999 /* DopeSquadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DopeSquadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DopeSquadUITests.swift; sourceTree = "<group>"; };
-		0EAD3CCE26121A2C00756999 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0EF0A2A126125DB000404F3C /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		0EF0A2A926125DE000404F3C /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
@@ -118,13 +107,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0EAD3CBA26121A2C00756999 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EAD3CC526121A2C00756999 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +270,6 @@
 			children = (
 				0EAD3CA626121A2A00756999 /* DopeSquad */,
 				0EAD3CC026121A2C00756999 /* DopeSquadTests */,
-				0EAD3CCB26121A2C00756999 /* DopeSquadUITests */,
 				0EAD3CA526121A2A00756999 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -298,7 +279,6 @@
 			children = (
 				0EAD3CA426121A2A00756999 /* DopeSquad.app */,
 				0EAD3CBD26121A2C00756999 /* DopeSquadTests.xctest */,
-				0EAD3CC826121A2C00756999 /* DopeSquadUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -332,15 +312,6 @@
 				0EAD3CC326121A2C00756999 /* Info.plist */,
 			);
 			path = DopeSquadTests;
-			sourceTree = "<group>";
-		};
-		0EAD3CCB26121A2C00756999 /* DopeSquadUITests */ = {
-			isa = PBXGroup;
-			children = (
-				0EAD3CCC26121A2C00756999 /* DopeSquadUITests.swift */,
-				0EAD3CCE26121A2C00756999 /* Info.plist */,
-			);
-			path = DopeSquadUITests;
 			sourceTree = "<group>";
 		};
 		0ED22BD72613C368002FE20A /* HeroDetail */ = {
@@ -413,24 +384,6 @@
 			productReference = 0EAD3CBD26121A2C00756999 /* DopeSquadTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0EAD3CC726121A2C00756999 /* DopeSquadUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0EAD3CD726121A2C00756999 /* Build configuration list for PBXNativeTarget "DopeSquadUITests" */;
-			buildPhases = (
-				0EAD3CC426121A2C00756999 /* Sources */,
-				0EAD3CC526121A2C00756999 /* Frameworks */,
-				0EAD3CC626121A2C00756999 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0EAD3CCA26121A2C00756999 /* PBXTargetDependency */,
-			);
-			name = DopeSquadUITests;
-			productName = DopeSquadUITests;
-			productReference = 0EAD3CC826121A2C00756999 /* DopeSquadUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -444,10 +397,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					0EAD3CBC26121A2C00756999 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 0EAD3CA326121A2A00756999;
-					};
-					0EAD3CC726121A2C00756999 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 0EAD3CA326121A2A00756999;
 					};
@@ -468,7 +417,6 @@
 			targets = (
 				0EAD3CA326121A2A00756999 /* DopeSquad */,
 				0EAD3CBC26121A2C00756999 /* DopeSquadTests */,
-				0EAD3CC726121A2C00756999 /* DopeSquadUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -486,13 +434,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0EAD3CBB26121A2C00756999 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EAD3CC626121A2C00756999 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -548,14 +489,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0EAD3CC426121A2C00756999 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EAD3CCD26121A2C00756999 /* DopeSquadUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -563,11 +496,6 @@
 			isa = PBXTargetDependency;
 			target = 0EAD3CA326121A2A00756999 /* DopeSquad */;
 			targetProxy = 0EAD3CBE26121A2C00756999 /* PBXContainerItemProxy */;
-		};
-		0EAD3CCA26121A2C00756999 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0EAD3CA326121A2A00756999 /* DopeSquad */;
-			targetProxy = 0EAD3CC926121A2C00756999 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,44 +715,6 @@
 			};
 			name = Release;
 		};
-		0EAD3CD826121A2C00756999 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DopeSquadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.DopeSquadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DopeSquad;
-			};
-			name = Debug;
-		};
-		0EAD3CD926121A2C00756999 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DopeSquadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guihsoft.DopeSquadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = DopeSquad;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -851,15 +741,6 @@
 			buildConfigurations = (
 				0EAD3CD526121A2C00756999 /* Debug */,
 				0EAD3CD626121A2C00756999 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0EAD3CD726121A2C00756999 /* Build configuration list for PBXNativeTarget "DopeSquadUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0EAD3CD826121A2C00756999 /* Debug */,
-				0EAD3CD926121A2C00756999 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
