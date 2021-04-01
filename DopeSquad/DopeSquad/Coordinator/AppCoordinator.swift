@@ -28,13 +28,8 @@ class AppCoordinator: AppCoordinatorProtocol {
     }
     
     func start() {
-        setupNavigationController()
         window.rootViewController = injector.navigationController
         window.makeKeyAndVisible()
-    }
-    
-    func setupNavigationController() {
-        
     }
     
     func presentNextStep(withModel model: HeroType) {
