@@ -11,6 +11,7 @@ import UIKit
 protocol HeroDetailViewDelegate: class {
     func backButtonPressed()
     func heroHiringButtonPressed()
+    func showAlertConfirmationForSquadRemoval()
 }
 
 class HeroDetailView: UIView {
@@ -142,16 +143,24 @@ class HeroDetailView: UIView {
         heroHiringButton.backgroundColor = backgroundColor
     }
     
+    func updateSquad() {
+        DispatchQueue.main.async {
+            self.isSquadMember.toggle()
+            self.updateHiringButtonAppearance()
+        }
+        delegate?.heroHiringButtonPressed()
+    }
+    
     // MARK: - Actions
     @objc private func dismissView() {
         delegate?.backButtonPressed()
     }
     
     @objc private func heroHiringButtonPressed() {
-        DispatchQueue.main.async {
-            self.isSquadMember.toggle()
-            self.updateHiringButtonAppearance()
+        if isSquadMember {
+            delegate?.showAlertConfirmationForSquadRemoval()
+            return
         }
-        delegate?.heroHiringButtonPressed()
+        updateSquad()
     }
 }

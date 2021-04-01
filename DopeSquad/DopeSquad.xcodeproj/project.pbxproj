@@ -45,7 +45,6 @@
 		0EADBC3E2613DE94009D2976 /* UIViewController+ReusableElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC3D2613DE94009D2976 /* UIViewController+ReusableElements.swift */; };
 		0EADBC432613E0D4009D2976 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC412613E0D4009D2976 /* HeroTableViewCell.swift */; };
 		0EADBC442613E0D4009D2976 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EADBC422613E0D4009D2976 /* HeroTableViewCell.xib */; };
-		0EADBC4C2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */; };
 		0EADBC502613E477009D2976 /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC4F2613E477009D2976 /* UIView+RoundedCorners.swift */; };
 		0EADBC542613E579009D2976 /* HeroesListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */; };
 		0EC5E8EA2616064500B95E07 /* SquadMembersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC5E8E92616064500B95E07 /* SquadMembersCollectionView.swift */; };
@@ -119,7 +118,6 @@
 		0EADBC3D2613DE94009D2976 /* UIViewController+ReusableElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ReusableElements.swift"; sourceTree = "<group>"; };
 		0EADBC412613E0D4009D2976 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
 		0EADBC422613E0D4009D2976 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
-		0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderOperationQueue.swift; sourceTree = "<group>"; };
 		0EADBC4F2613E477009D2976 /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
 		0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesListViewController+TableView.swift"; sourceTree = "<group>"; };
 		0EC5E8E92616064500B95E07 /* SquadMembersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadMembersCollectionView.swift; sourceTree = "<group>"; };
@@ -356,7 +354,6 @@
 				0EAD3CB526121A2C00756999 /* LaunchScreen.storyboard */,
 				0EAD3CB826121A2C00756999 /* Info.plist */,
 				0EAD3CB026121A2A00756999 /* DopeSquad.xcdatamodeld */,
-				0EADBC4B2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift */,
 			);
 			path = DopeSquad;
 			sourceTree = "<group>";
@@ -660,7 +657,6 @@
 			files = (
 				0E956D1526124AEB00560496 /* APIItem.swift in Sources */,
 				0E956CF92612490500560496 /* HeroesEndpoint.swift in Sources */,
-				0EADBC4C2613E3AE009D2976 /* ImageDownloaderOperationQueue.swift in Sources */,
 				0EAD3CB226121A2A00756999 /* DopeSquad.xcdatamodeld in Sources */,
 				0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */,
 				0E956D1A26124B1E00560496 /* APIResource.swift in Sources */,

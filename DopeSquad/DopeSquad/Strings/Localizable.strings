@@ -14,6 +14,9 @@
 "recruitToSquad_buttonTitle" = "💪 Recruit to Squad";
 "fireFromSquad_buttonTitle" = "🔥 Fire from Squad";
 "mySquad_title" = "My Squad";
+"resignationConfirmationAlert_message" = "Are you sure you want to fire %@?";
+"resignationConfirmationButton_title" = "Yes";
+"resignationDenialButton_title" = "No";
 
 // MARK: - Error Messages
 "genericError_title" = "Error";

@@ -7,6 +7,8 @@
 
 import UIKit
 
+typealias AlertAction = (actionTitle: String, style: UIAlertAction.Style, actionHandler: ((UIAlertAction) -> Void)? )
+
 extension UIViewController {
     
     // MARK: - Alert
@@ -14,6 +16,15 @@ extension UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: LocalizableStrings.confirmButtonTitle.localize(), style: .default, handler: okActionHandler)
         alertController.addAction(OKAction)
+        present(alertController, animated: true, completion: completion)
+    }
+    
+    func alert(title: String = .init(), message: String, completion: (() -> Void)? = nil, actions: [AlertAction]) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        actions.forEach({
+            let action = UIAlertAction(title: $0.actionTitle, style: $0.style, handler: $0.actionHandler)
+            alertController.addAction(action)
+        })
         present(alertController, animated: true, completion: completion)
     }
     

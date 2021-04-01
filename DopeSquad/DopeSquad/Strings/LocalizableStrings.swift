@@ -17,6 +17,9 @@ enum LocalizableStrings: String {
     case recruitToSquadButtonTitle = "recruitToSquad_buttonTitle"
     case fireFromSquadButtonTitle = "fireFromSquad_buttonTitle"
     case mySquadTitle = "mySquad_title"
+    case resignationConfirmationAlertMessage = "resignationConfirmationAlert_message"
+    case resignationConfirmationButtonTitle = "resignationConfirmationButton_title"
+    case resignationDenialButtonTitle = "resignationDenialButton_title"
     
     // MARK: - Error Messages
     case genericErrorTitle = "genericError_title"
