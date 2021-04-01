@@ -5,36 +5,28 @@
 //  Created by Guilherme Antunes on 01/04/2021.
 //
 
+import MapleBacon
 import UIKit
 
-class SquadMemberCollectionViewCell: ImageDownloaderCollectionViewCell {
+class SquadMemberCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var heroImageView: UIImageView?
     @IBOutlet weak var heroNameLabel: UILabel?
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        
+        resetCell()
     }
     
     func setup(withHero hero: HeroType) {
         heroNameLabel?.text = hero.name
-        handleHeroImage(hero.thumbnail)
-    }
-    
-    private func handleHeroImage(_ urlString: String) {
-        imageDownloader.addOperation { [weak self] in
-            guard let url = URL(string: urlString), let imageData = try? Data(contentsOf: url), !imageData.isEmpty else { return }
-            DispatchQueue.main.async {
-                self?.heroImageView?.image = UIImage(data: imageData)
-            }
-        }
+        heroImageView?.setImage(with: URL(string: hero.thumbnail))
     }
     
     private func resetCell() {
         heroNameLabel?.text = .init()
         heroImageView?.image = nil
-        imageDownloader.cancelAllOperations()
+        heroImageView?.cancelDownload()
     }
     
 }
