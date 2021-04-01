@@ -148,8 +148,10 @@ class HeroDetailView: UIView {
     }
     
     @objc private func heroHiringButtonPressed() {
-        isSquadMember.toggle()
-        updateHiringButtonAppearance()
+        DispatchQueue.main.async {
+            self.isSquadMember.toggle()
+            self.updateHiringButtonAppearance()
+        }
         delegate?.heroHiringButtonPressed()
     }
 }

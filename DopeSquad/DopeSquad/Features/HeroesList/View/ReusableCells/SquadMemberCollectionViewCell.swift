@@ -20,6 +20,11 @@ class SquadMemberCollectionViewCell: UICollectionViewCell {
     
     func setup(withHero hero: HeroType) {
         heroNameLabel?.text = hero.name
+        heroImageView?.roundCorners(.allCorners, radius: 32)
+        if let data = hero.thumbnailData {
+            heroImageView?.image = UIImage(data: data)
+            return
+        }
         heroImageView?.setImage(with: URL(string: hero.thumbnail))
     }
     

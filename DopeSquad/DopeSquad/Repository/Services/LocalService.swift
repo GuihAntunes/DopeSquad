@@ -21,6 +21,7 @@ class LocalService: HeroesLocalRepositoryProtocol {
         coreHero.setValue(hero.name, forKey: "name")
         coreHero.setValue(hero.id, forKey: "id")
         coreHero.setValue(hero.biography, forKey: "biography")
+        coreHero.setValue(hero.thumbnail, forKey: "thumbnailPath")
         if let imageData = thumbnail?.pngData() {
             coreHero.setValue(imageData, forKey: "image")
         }
@@ -65,11 +66,13 @@ class LocalService: HeroesLocalRepositoryProtocol {
                 if let id = data.value(forKey: "id") as? Int,
                    let name = data.value(forKey: "name") as? String,
                    let imageData = data.value(forKey: "image") as? Data,
-                   let biography = data.value(forKey: "biography") as? String {
+                   let biography = data.value(forKey: "biography") as? String,
+                   let fullPath = data.value(forKey: "thumbnailPath") as? String {
                     hero.id = id
                     hero.name = name
                     hero.imageData = imageData
                     hero.description = biography
+                    hero.thumbnail = .init(withFullPath: fullPath)
                     heroes.append(HeroAdapter(withAPIHero: hero))
                 }
             }

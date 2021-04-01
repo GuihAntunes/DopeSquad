@@ -13,6 +13,7 @@
 "unknownHero_name" = "Unknown Hero";
 "recruitToSquad_buttonTitle" = "💪 Recruit to Squad";
 "fireFromSquad_buttonTitle" = "🔥 Fire from Squad";
+"mySquad_title" = "My Squad";
 
 // MARK: - Error Messages
 "genericError_title" = "Error";

@@ -15,7 +15,10 @@ protocol HeroesListViewModelProtocol: class {
 
 class HeroesListViewModel: HeroesListViewModelProtocol {
     
-    lazy var squadHeroes: [HeroType] = repository.retriveSquad()
+    var squadHeroes: [HeroType] {
+        return repository.retriveSquad().sorted(by: { $0.name < $1.name })
+    }
+    
     var heroes: [HeroType] = .init()
     var lastIndex: Int = 0
     var repository: HeroesRepositoryProtocol

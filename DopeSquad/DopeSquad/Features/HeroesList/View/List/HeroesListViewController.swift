@@ -69,7 +69,6 @@ class HeroesListViewController: UIViewController {
         heroesTableView.translatesAutoresizingMaskIntoConstraints = false
         heroesTableView.separatorStyle = .none
         heroesTableView.rowHeight = 92
-        heroesTableView.sectionHeaderHeight = 106
         view.addSubview(heroesTableView)
         view.bringSubviewToFront(heroesTableView)
     }

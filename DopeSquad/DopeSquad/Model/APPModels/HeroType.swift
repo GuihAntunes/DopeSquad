@@ -12,4 +12,5 @@ protocol HeroType {
     var name: String { get }
     var biography: String { get }
     var thumbnail: String { get }
+    var thumbnailData: Data? { get }
 }

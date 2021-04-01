@@ -14,6 +14,10 @@ extension HeroDetailViewController: HeroDetailViewDelegate {
     }
     
     func heroHiringButtonPressed() {
+        if contentView.isSquadMember {
+            viewModel.removeHeroFromSquad()
+            return
+        }
         viewModel.recruitHeroToSquad(withImage: contentView.heroImage)
     }
     

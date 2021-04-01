@@ -30,7 +30,11 @@ extension HeroesListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard !viewModel.squadHeroes.isEmpty else { return .init() }
-        return SquadMembersCollectionView(withDelegate: self, frame: .init(origin: .zero, size: .init(width: view.frame.width, height: 106)), andHeroes: viewModel.squadHeroes)
+        return squadHeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return viewModel.squadHeroes.isEmpty ? 0 : 180
     }
     
     // MARK: - Support Methods
