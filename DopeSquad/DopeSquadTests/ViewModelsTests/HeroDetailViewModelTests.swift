@@ -37,6 +37,10 @@ class HeroDetailViewModelTests: XCTestCase {
     }
     
     struct MockedHero: HeroType {
+        var thumbnailData: Data? {
+            return nil
+        }
+        
         var id: Int {
             return 10
         }

@@ -16,13 +16,15 @@ class HeroesListViewModelTests: XCTestCase {
     class MockedRepository: HeroesRepositoryProtocol {
         
         var shouldTriggerErrorFlow = false
+        var shouldBeMultipleHeroesScenario = false
         
         func fetchHeroesList(lastIndex index: Int, completion: @escaping (Result<[HeroType], NetworkError>) -> Void) {
             if shouldTriggerErrorFlow {
                 completion(.failure(.generalError(error: "Some error")))
                 return
             }
-            let response: APIMarvelCharacterListResponse = generateModels(fileName: "HeroListResponseExample")
+            let fileName: String = shouldBeMultipleHeroesScenario ? "MultipleHeroListResponseExample" : "HeroListResponseExample"
+            let response: APIMarvelCharacterListResponse = generateModels(fileName: fileName)
             guard let heroes = response.data?.results else {
                 completion(.failure(.generalError(error: "Failed to get mocked data")))
                 return
@@ -58,6 +60,33 @@ class HeroesListViewModelTests: XCTestCase {
     }
     
     func testSuccessScenarioForPagination_shouldReturnABiggerListOfHeroes() {
+        mockedRepository.shouldBeMultipleHeroesScenario = true
+        sut.loadContent { result in
+            switch result {
+            case .success(let success):
+                XCTAssert(success)
+                XCTAssert(self.sut.squadHeroes.isEmpty)
+                XCTAssert(!self.sut.heroes.isEmpty)
+                XCTAssert(self.sut.heroes.count == 6)
+                self.mockedRepository.shouldBeMultipleHeroesScenario = false
+                self.sut.loadContent { result in
+                    switch result {
+                    case .success(let success):
+                        XCTAssert(success)
+                        XCTAssert(self.sut.squadHeroes.isEmpty)
+                        XCTAssert(!self.sut.heroes.isEmpty)
+                        XCTAssert(self.sut.heroes.count == 7)
+                    case .failure:
+                        XCTFail("Fell into error scenario")
+                    }
+                }
+            case .failure:
+                XCTFail("Fell into error scenario")
+            }
+        }
+    }
+    
+    func testSuccessScenarioForRemovingDuplicates_shouldReturnTheSameListOfHeroes() {
         sut.loadContent { result in
             switch result {
             case .success(let success):
@@ -71,7 +100,7 @@ class HeroesListViewModelTests: XCTestCase {
                         XCTAssert(success)
                         XCTAssert(self.sut.squadHeroes.isEmpty)
                         XCTAssert(!self.sut.heroes.isEmpty)
-                        XCTAssert(self.sut.heroes.count == 2)
+                        XCTAssert(self.sut.heroes.count == 1)
                     case .failure:
                         XCTFail("Fell into error scenario")
                     }

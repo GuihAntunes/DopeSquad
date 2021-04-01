@@ -9,8 +9,27 @@ import UIKit
 
 class HeroesListViewController: UIViewController {
     
-    lazy var heroesTableView: UITableView = .init(frame: view.frame, style: .plain)
+    lazy var heroesTableView: UITableView = {
+        let tableView: UITableView = .init(frame: view.frame, style: .plain)
+        tableView.register(UINib(nibName: HeroTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HeroTableViewCell.reuseIdentifier)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 92
+        tableView.refreshControl = refreshControl
+        return tableView
+    }()
+    
     lazy var squadHeaderView: SquadMembersCollectionView = .init(withDelegate: self, frame: view.frame, andHeroes: viewModel.squadHeroes)
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refresh: UIRefreshControl = .init(frame: view.frame)
+        refresh.addTarget(self, action: #selector(refreshList), for: .valueChanged)
+        refresh.tintColor = .white
+        return refresh
+    }()
+    
     var viewModel: HeroesListViewModelProtocol
     var coordinator: AppCoordinatorProtocol
     
@@ -41,16 +60,7 @@ class HeroesListViewController: UIViewController {
     // MARK: - Setup Methods
     func loadContent() {
         addBlurLoading()
-        viewModel.loadContent { [weak self] result in
-            guard let self = self else { return }
-            self.removeBlurLoading()
-            switch result {
-            case .success:
-                self.heroesTableView.reloadData()
-            case .failure(let error):
-                self.alert(message: error.localizedDescription)
-            }
-        }
+        refreshList()
     }
     
     func setupController() {
@@ -64,12 +74,6 @@ class HeroesListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        heroesTableView.register(UINib(nibName: HeroTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: HeroTableViewCell.reuseIdentifier)
-        heroesTableView.dataSource = self
-        heroesTableView.delegate = self
-        heroesTableView.translatesAutoresizingMaskIntoConstraints = false
-        heroesTableView.separatorStyle = .none
-        heroesTableView.rowHeight = 92
         view.addSubview(heroesTableView)
         view.bringSubviewToFront(heroesTableView)
     }
@@ -89,5 +93,19 @@ class HeroesListViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.titleView = UIImageView(image: UIImage(named: "Marvel"))
         navigationController?.navigationBar.barTintColor = UIColor(named: UIColor.AppColors.appBackgroundColor.rawValue)
+    }
+    
+    @objc private func refreshList() {
+        viewModel.loadContent { [weak self] result in
+            guard let self = self else { return }
+            self.refreshControl.endRefreshing()
+            self.removeBlurLoading()
+            switch result {
+            case .success:
+                self.heroesTableView.reloadData()
+            case .failure(let error):
+                self.alert(message: error.localizedDescription)
+            }
+        }
     }
 }

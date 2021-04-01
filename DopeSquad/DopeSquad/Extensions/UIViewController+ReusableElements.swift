@@ -20,7 +20,7 @@ extension UIViewController {
     // MARK: - Loading Indicator
     func addBlurLoading() {
         let showActivity = UIActivityIndicatorView()
-        let blurEffect = UIBlurEffect(style: .extraLight)
+        let blurEffect = UIBlurEffect(style: .dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.alpha = 0.3
         blurEffectView.frame = view.bounds

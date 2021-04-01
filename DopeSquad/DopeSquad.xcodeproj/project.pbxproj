@@ -50,6 +50,7 @@
 		0EADBC542613E579009D2976 /* HeroesListViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */; };
 		0EC5E8EA2616064500B95E07 /* SquadMembersCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC5E8E92616064500B95E07 /* SquadMembersCollectionView.swift */; };
 		0EC5E8F3261609E200B95E07 /* SquadMembersCollectionView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC5E8F2261609E200B95E07 /* SquadMembersCollectionView+CollectionView.swift */; };
+		0EC604DE26166AF900FBFA29 /* MultipleHeroListResponseExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0EC604DD26166AF900FBFA29 /* MultipleHeroListResponseExample.json */; };
 		0ED22BDF2613C4B5002FE20A /* HeroDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */; };
 		0ED22BEE2613CC46002FE20A /* HeroesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */; };
 		0ED22BF22613CD68002FE20A /* TestsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BF12613CD68002FE20A /* TestsUtils.swift */; };
@@ -123,6 +124,7 @@
 		0EADBC532613E579009D2976 /* HeroesListViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesListViewController+TableView.swift"; sourceTree = "<group>"; };
 		0EC5E8E92616064500B95E07 /* SquadMembersCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadMembersCollectionView.swift; sourceTree = "<group>"; };
 		0EC5E8F2261609E200B95E07 /* SquadMembersCollectionView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SquadMembersCollectionView+CollectionView.swift"; sourceTree = "<group>"; };
+		0EC604DD26166AF900FBFA29 /* MultipleHeroListResponseExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MultipleHeroListResponseExample.json; sourceTree = "<group>"; };
 		0ED22BDE2613C4B5002FE20A /* HeroDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewModel.swift; sourceTree = "<group>"; };
 		0ED22BEC2613CC46002FE20A /* DopeSquadTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DopeSquadTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0ED22BED2613CC46002FE20A /* HeroesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListViewModelTests.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 			children = (
 				0ED22BF12613CD68002FE20A /* TestsUtils.swift */,
 				0ED22BFD2613CEDB002FE20A /* HeroListResponseExample.json */,
+				0EC604DD26166AF900FBFA29 /* MultipleHeroListResponseExample.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC604DE26166AF900FBFA29 /* MultipleHeroListResponseExample.json in Resources */,
 				0ED22BFE2613CEDB002FE20A /* HeroListResponseExample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
