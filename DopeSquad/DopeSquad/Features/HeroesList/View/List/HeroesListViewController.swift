@@ -42,12 +42,13 @@ class HeroesListViewController: UIViewController {
     func loadContent() {
         addBlurLoading()
         viewModel.loadContent { [weak self] result in
-            self?.removeBlurLoading()
+            guard let self = self else { return }
+            self.removeBlurLoading()
             switch result {
             case .success:
-                self?.heroesTableView.reloadData()
+                self.heroesTableView.reloadData()
             case .failure(let error):
-                print(error)
+                self.alert(message: error.localizedDescription)
             }
         }
     }

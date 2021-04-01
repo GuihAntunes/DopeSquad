@@ -20,11 +20,13 @@ class HeroAdapter {
 extension HeroAdapter: HeroType {
     
     var name: String {
-        return hero.name ?? LocalizableStrings.unknownHeroName.localize()
+        guard let name = hero.name, !name.isEmpty else { return LocalizableStrings.unknownHeroName.localize() }
+        return name
     }
     
     var biography: String {
-        return hero.description ?? LocalizableStrings.unknownHeroDescription.localize()
+        guard let biography = hero.description, !biography.isEmpty else { return LocalizableStrings.unknownHeroDescription.localize() }
+        return biography
     }
     
     var thumbnail: String {

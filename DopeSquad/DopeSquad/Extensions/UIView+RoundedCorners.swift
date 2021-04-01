@@ -15,6 +15,7 @@ extension UIView {
         let shape = CAShapeLayer()
         shape.path = maskPath.cgPath
         layer.mask = shape
+        layer.cornerRadius = radius
         clipsToBounds = true
     }
 }
