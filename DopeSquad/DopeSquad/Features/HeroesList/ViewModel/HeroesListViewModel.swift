@@ -30,6 +30,7 @@ class HeroesListViewModel: HeroesListViewModelProtocol {
             switch result {
             case .success(let heroes):
                 self.heroes.append(contentsOf: heroes)
+                self.heroes = self.heroes.sorted(by: { $0.name < $1.name })
                 self.lastIndex = self.heroes.count
                 completion(.success(true))
             case .failure(let error):

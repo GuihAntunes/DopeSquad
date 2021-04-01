@@ -11,6 +11,7 @@ class ImageDownloadOperationQueue: OperationQueue {
     
     convenience init(maxConcurrentOperationCount: Int) {
         self.init()
+        underlyingQueue = .global()
         self.maxConcurrentOperationCount = maxConcurrentOperationCount
     }
     
