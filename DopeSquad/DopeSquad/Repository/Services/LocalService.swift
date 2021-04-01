@@ -10,9 +10,10 @@ import UIKit
 
 class LocalService: HeroesLocalRepositoryProtocol {
     
-    private var context: NSManagedObjectContext? {
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
-        return appDelegate.persistentContainer.viewContext
+    private var context: NSManagedObjectContext?
+    
+    init(withContext context: NSManagedObjectContext?) {
+        self.context = context
     }
     
     func recruitHeroToSquad(_ hero: HeroType, withThumbnail thumbnail: UIImage?) {
@@ -34,20 +35,18 @@ class LocalService: HeroesLocalRepositoryProtocol {
     }
     
     func removeHeroFromSquad(heroID id: Int) {
-        DispatchQueue.main.async {
-            guard let context = self.context else { return }
-            let heroFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataHero")
-            
-            heroFetchRequest.predicate = NSPredicate(format: "id = %i", id)
-            
-            guard let heroToDelete = try? context.fetch(heroFetchRequest).first as? NSManagedObject else { return }
-            context.delete(heroToDelete)
-            
-            do {
-                try context.save()
-            } catch {
-                print("Failed to fetch hero from CoreData and delete")
-            }
+        guard let context = self.context else { return }
+        let heroFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CoreDataHero")
+        
+        heroFetchRequest.predicate = NSPredicate(format: "id = %i", id)
+        
+        guard let heroToDelete = try? context.fetch(heroFetchRequest).first as? NSManagedObject else { return }
+        context.delete(heroToDelete)
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed to fetch hero from CoreData and delete")
         }
     }
     

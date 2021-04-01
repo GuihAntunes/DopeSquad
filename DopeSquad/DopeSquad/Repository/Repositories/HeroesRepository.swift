@@ -12,7 +12,7 @@ class HeroesRepository: HeroesRepositoryProtocol {
     let remoteService: HeroesRemoteRepositoryProtocol
     let localService: HeroesLocalRepositoryProtocol
     
-    init(remoteService: HeroesRemoteRepositoryProtocol = MarvelService(), localService: HeroesLocalRepositoryProtocol = LocalService()) {
+    init(remoteService: HeroesRemoteRepositoryProtocol = MarvelService(), localService: HeroesLocalRepositoryProtocol) {
         self.remoteService = remoteService
         self.localService = localService
     }
