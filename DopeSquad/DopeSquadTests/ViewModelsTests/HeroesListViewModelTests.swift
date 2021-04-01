@@ -61,11 +61,13 @@ class HeroesListViewModelTests: XCTestCase {
     
     func testSuccessScenarioForPagination_shouldReturnABiggerListOfHeroes() {
         mockedRepository.shouldBeMultipleHeroesScenario = true
+        XCTAssert(self.sut.lastIndex == 0)
         sut.loadContent { result in
             switch result {
             case .success(let success):
                 XCTAssert(success)
                 XCTAssert(self.sut.squadHeroes.isEmpty)
+                XCTAssert(self.sut.lastIndex == 6)
                 XCTAssert(!self.sut.heroes.isEmpty)
                 XCTAssert(self.sut.heroes.count == 6)
                 self.mockedRepository.shouldBeMultipleHeroesScenario = false
@@ -75,6 +77,7 @@ class HeroesListViewModelTests: XCTestCase {
                         XCTAssert(success)
                         XCTAssert(self.sut.squadHeroes.isEmpty)
                         XCTAssert(!self.sut.heroes.isEmpty)
+                        XCTAssert(self.sut.lastIndex == 7)
                         XCTAssert(self.sut.heroes.count == 7)
                     case .failure:
                         XCTFail("Fell into error scenario")
