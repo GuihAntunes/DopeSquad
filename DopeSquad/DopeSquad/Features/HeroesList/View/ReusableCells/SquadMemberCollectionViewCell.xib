@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SquadMemberCollectionViewCell" customModule="DopeSquad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="64" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cda-Cw-1kk">
+                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Cda-Cw-1kk" secondAttribute="height" id="T3c-RC-v4J"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVJ-yV-kUn">
+                        <rect key="frame" x="0.0" y="64" width="64" height="40"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" name="TextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="jVJ-yV-kUn" firstAttribute="top" secondItem="Cda-Cw-1kk" secondAttribute="bottom" id="7B6-dp-bve"/>
+                <constraint firstAttribute="trailing" secondItem="jVJ-yV-kUn" secondAttribute="trailing" id="L2p-Ko-OKz"/>
+                <constraint firstAttribute="bottom" secondItem="jVJ-yV-kUn" secondAttribute="bottom" id="Q0v-Da-Cwx"/>
+                <constraint firstItem="Cda-Cw-1kk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ex4-cU-sHJ"/>
+                <constraint firstItem="jVJ-yV-kUn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fPD-IG-6dX"/>
+                <constraint firstItem="Cda-Cw-1kk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hPI-9J-3iI"/>
+                <constraint firstAttribute="trailing" secondItem="Cda-Cw-1kk" secondAttribute="trailing" id="nB5-Ah-PpH"/>
+            </constraints>
+            <size key="customSize" width="189" height="169"/>
+            <connections>
+                <outlet property="heroImageView" destination="Cda-Cw-1kk" id="WTP-Vb-ECc"/>
+                <outlet property="heroNameLabel" destination="jVJ-yV-kUn" id="HZ8-8z-cam"/>
+            </connections>
+            <point key="canvasLocation" x="232.60869565217394" y="139.62053571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="TextColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

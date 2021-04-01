@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  DopeSquad
+
+  Created by Guilherme Antunes on 29/03/2021.
+  
+*/
+
+// MARK: - View Elements Strings
+"confirmButton_title" = "Ok";
+"backButton_title" = "Back";
+"unknownHero_description" = "No biography on our records";
+"unknownHero_name" = "Unknown Hero";
+"recruitToSquad_buttonTitle" = "💪 Recruit to Squad";
+"fireFromSquad_buttonTitle" = "🔥 Fire from Squad";
+"mySquad_title" = "My Squad";
+"resignationConfirmationAlert_message" = "Are you sure you want to fire %@?";
+"resignationConfirmationButton_title" = "Yes";
+"resignationDenialButton_title" = "No";
+
+// MARK: - Error Messages
+"genericError_title" = "Error";
+"genericError_message" = "Unexpected error, please, try again later!";
+"releasedClassError_message" = "Class deinitialized!";
+"connectionError_message" = "Please, check your internet connection!";
+"mappingError_message" = "Error catched when parsing model %@!";
