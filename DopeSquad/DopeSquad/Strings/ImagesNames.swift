@@ -8,5 +8,5 @@
 import Foundation
 
 enum ImagesNames: String {
-    case BackButtonImage = "backArrow"
+    case BackButtonImage = "BackArrow"
 }

@@ -14,6 +14,7 @@ extension UIColor {
         case textColor = "TextColor"
         case appBackgroundColor = "AppBackgroundColor"
         case cellBackgroundColor = "CellBackgroundColor"
+        case hiringButtonBackgroundColor = "HiringButtonBackgroundColor"
     }
     
 }

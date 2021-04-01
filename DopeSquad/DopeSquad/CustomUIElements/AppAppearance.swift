@@ -17,6 +17,9 @@ class AppAppearance {
     static func setAppBackgroundColor() {
         let subviewsBackgroundColor = UIColor(named: UIColor.AppColors.appBackgroundColor.rawValue)
         UITableView.appearance().backgroundColor = subviewsBackgroundColor
+        UITextView.appearance().textColor = UIColor(named: UIColor.AppColors.textColor.rawValue)
+        UITextView.appearance().font = .systemFont(ofSize: 17)
+        UILabel.appearance().textColor = UIColor(named: UIColor.AppColors.textColor.rawValue)
     }
     
     static func setLabelsAppeareance() {

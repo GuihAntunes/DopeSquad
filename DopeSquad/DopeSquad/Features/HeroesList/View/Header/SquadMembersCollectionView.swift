@@ -41,6 +41,7 @@ class SquadMembersCollectionView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setup Methods
     private func setupView() {
         addSubviews()
         setupConstraints()
@@ -60,6 +61,12 @@ class SquadMembersCollectionView: UIView {
             squadCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             squadCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
+    }
+    
+    // MARK: - Public Methods
+    func reloadSquad(withNewSquad squad: [HeroType]) {
+        heroes = squad
+        squadCollectionView.reloadData()
     }
     
 }

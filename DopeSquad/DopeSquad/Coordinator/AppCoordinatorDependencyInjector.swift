@@ -32,19 +32,16 @@ class AppCoordinatorDependencyInjector {
         return HeroesListViewModel(withRepository: heroesRepository)
     }()
     
-    private lazy var heroDetailViewModel: HeroDetailViewModel = {
-        return HeroDetailViewModel(withRepository: heroesRepository)
-    }()
-    
     // MARK: - Repositories
     private lazy var heroesRepository: HeroesRepositoryProtocol = {
         return HeroesRepository()
     }()
     
     // MARK: - Injector Methods
-    func getDetailViewController<T: HeroType>(withModel model: T) -> UIViewController {
-        heroDetailViewModel.selectedHero = model
-        return .init()
+    func getDetailViewController(withModel model: HeroType) -> UIViewController {
+        let viewModel = HeroDetailViewModel(withRepository: heroesRepository)
+        viewModel.hero = model
+        return HeroDetailViewController(withCoordinator: appCoordinator, andViewModel: viewModel)
     }
     
 }

@@ -11,6 +11,8 @@
 "backButton_title" = "Back";
 "unknownHero_description" = "Nothing on our records";
 "unknownHero_name" = "Unknown Hero";
+"recruitToSquad_buttonTitle" = "💪 Recruit to Squad";
+"fireFromSquad_buttonTitle" = "🔥 Fire from Squad";
 
 // MARK: - Error Messages
 "genericError_title" = "Error";

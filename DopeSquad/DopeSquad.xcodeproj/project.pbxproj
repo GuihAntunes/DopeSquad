@@ -56,6 +56,9 @@
 		0ED22BF72613CDC4002FE20A /* HeroAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED22BF62613CDC4002FE20A /* HeroAdapterTests.swift */; };
 		0ED22BFE2613CEDB002FE20A /* HeroListResponseExample.json in Resources */ = {isa = PBXBuildFile; fileRef = 0ED22BFD2613CEDB002FE20A /* HeroListResponseExample.json */; };
 		0EE528F626162E320041ACEF /* HeroesListViewController+SquadMembersCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE528F526162E320041ACEF /* HeroesListViewController+SquadMembersCollectionDelegate.swift */; };
+		0EE528FA261630450041ACEF /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE528F9261630450041ACEF /* HeroDetailViewController.swift */; };
+		0EE528FE2616314C0041ACEF /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE528FD2616314C0041ACEF /* HeroDetailView.swift */; };
+		0EE5290226163B9A0041ACEF /* HeroDetailViewController+HeroDetailViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE5290126163B9A0041ACEF /* HeroDetailViewController+HeroDetailViewDelegate.swift */; };
 		0EF0A2A226125DB000404F3C /* AppAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A126125DB000404F3C /* AppAppearance.swift */; };
 		0EF0A2AA26125DE000404F3C /* ImagesNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2A926125DE000404F3C /* ImagesNames.swift */; };
 		0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */; };
@@ -127,6 +130,9 @@
 		0ED22BF62613CDC4002FE20A /* HeroAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroAdapterTests.swift; sourceTree = "<group>"; };
 		0ED22BFD2613CEDB002FE20A /* HeroListResponseExample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HeroListResponseExample.json; sourceTree = "<group>"; };
 		0EE528F526162E320041ACEF /* HeroesListViewController+SquadMembersCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroesListViewController+SquadMembersCollectionDelegate.swift"; sourceTree = "<group>"; };
+		0EE528F9261630450041ACEF /* HeroDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
+		0EE528FD2616314C0041ACEF /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
+		0EE5290126163B9A0041ACEF /* HeroDetailViewController+HeroDetailViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeroDetailViewController+HeroDetailViewDelegate.swift"; sourceTree = "<group>"; };
 		0EF0A2A126125DB000404F3C /* AppAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearance.swift; sourceTree = "<group>"; };
 		0EF0A2A926125DE000404F3C /* ImagesNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesNames.swift; sourceTree = "<group>"; };
 		0EF0A2B626125E4000404F3C /* UIColor+NamedColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+NamedColors.swift"; sourceTree = "<group>"; };
@@ -414,6 +420,9 @@
 		0ED22BDD2613C383002FE20A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0EE528F9261630450041ACEF /* HeroDetailViewController.swift */,
+				0EE5290126163B9A0041ACEF /* HeroDetailViewController+HeroDetailViewDelegate.swift */,
+				0EE528FD2616314C0041ACEF /* HeroDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +663,7 @@
 				0E6FB54D2613A41A00965656 /* HeroType.swift in Sources */,
 				0E6FB5642613A6D300965656 /* HeroesRepository.swift in Sources */,
 				0E6FB5592613A59200965656 /* AppCoordinator.swift in Sources */,
+				0EE5290226163B9A0041ACEF /* HeroDetailViewController+HeroDetailViewDelegate.swift in Sources */,
 				0E6FB5422613A0CB00965656 /* HeroAdapter.swift in Sources */,
 				0E956CFF2612493700560496 /* String+MD5.swift in Sources */,
 				0E956D562612569000560496 /* LocalService.swift in Sources */,
@@ -664,9 +674,11 @@
 				0EF0A2B726125E4000404F3C /* UIColor+NamedColors.swift in Sources */,
 				0EADBC542613E579009D2976 /* HeroesListViewController+TableView.swift in Sources */,
 				0E956D0D26124ACB00560496 /* APIThumbnail.swift in Sources */,
+				0EE528FA261630450041ACEF /* HeroDetailViewController.swift in Sources */,
 				0EAA9AF726160B6400B9F226 /* SquadMemberCollectionViewCell.swift in Sources */,
 				0EE528F626162E320041ACEF /* HeroesListViewController+SquadMembersCollectionDelegate.swift in Sources */,
 				0EC5E8F3261609E200B95E07 /* SquadMembersCollectionView+CollectionView.swift in Sources */,
+				0EE528FE2616314C0041ACEF /* HeroDetailView.swift in Sources */,
 				0E956D2926124CAF00560496 /* GenericServiceResponse.swift in Sources */,
 				0E6FB56D2613B18E00965656 /* HeroesListViewModel.swift in Sources */,
 				0E956D2E26124DDF00560496 /* NetworkError.swift in Sources */,

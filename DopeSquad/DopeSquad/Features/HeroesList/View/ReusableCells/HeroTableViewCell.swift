@@ -20,8 +20,8 @@ class HeroTableViewCell: UITableViewCell {
     }
     
     func setupCell(withHero hero: HeroType) {
-        cardView?.roundCorners([.allCorners], radius: 8)
-        heroImageView?.roundCorners([.allCorners], radius: 22)
+        cardView?.roundCorners(.allCorners, radius: 8)
+        heroImageView?.roundCorners(.allCorners, radius: 22)
         heroNameLabel?.text = hero.name
         heroImageView?.setImage(with: URL(string: hero.thumbnail))
     }

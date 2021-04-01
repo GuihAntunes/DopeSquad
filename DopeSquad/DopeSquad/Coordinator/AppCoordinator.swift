@@ -41,6 +41,7 @@ class AppCoordinator: AppCoordinatorProtocol {
             switch state {
             case .list:
                 state = .detail
+                injector.navigationController.pushViewController(injector.getDetailViewController(withModel: model), animated: true)
                 break
             case.detail:
                 print("Last controller for this coordination flow!")
@@ -50,10 +51,10 @@ class AppCoordinator: AppCoordinatorProtocol {
     func presentPreviousStep() {
         switch state {
         case .list:
-            print("")
+            print("First controller for this coordination flow!")
         case.detail:
             state = .list
-            print("")
+            injector.navigationController.popViewController(animated: true)
         }
     }
 }

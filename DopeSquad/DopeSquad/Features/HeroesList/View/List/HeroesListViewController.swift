@@ -10,6 +10,7 @@ import UIKit
 class HeroesListViewController: UIViewController {
     
     lazy var heroesTableView: UITableView = .init(frame: view.frame, style: .plain)
+    lazy var squadHeaderView: SquadMembersCollectionView = .init(withDelegate: self, frame: view.frame, andHeroes: viewModel.squadHeroes)
     var viewModel: HeroesListViewModelProtocol
     var coordinator: AppCoordinatorProtocol
     
@@ -33,6 +34,8 @@ class HeroesListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupNavigationBar()
+        squadHeaderView.reloadSquad(withNewSquad: viewModel.squadHeroes)
     }
     
     // MARK: - Setup Methods
@@ -52,7 +55,6 @@ class HeroesListViewController: UIViewController {
     func setupController() {
         setupColorScheme()
         setupTableView()
-        setupNavigationBar()
         setupConstraints()
     }
     
@@ -67,6 +69,7 @@ class HeroesListViewController: UIViewController {
         heroesTableView.translatesAutoresizingMaskIntoConstraints = false
         heroesTableView.separatorStyle = .none
         heroesTableView.rowHeight = 92
+        heroesTableView.sectionHeaderHeight = 106
         view.addSubview(heroesTableView)
         view.bringSubviewToFront(heroesTableView)
     }
@@ -83,6 +86,7 @@ class HeroesListViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        navigationController?.setNavigationBarHidden(false, animated: true)
         navigationItem.titleView = UIImageView(image: UIImage(named: "Marvel"))
         navigationController?.navigationBar.barTintColor = UIColor(named: UIColor.AppColors.appBackgroundColor.rawValue)
     }

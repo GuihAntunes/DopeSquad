@@ -14,6 +14,8 @@ enum LocalizableStrings: String {
     case backButtonTitle = "backButton_title"
     case unknownHeroName = "unknownHero_name"
     case unknownHeroDescription = "unknownHero_description"
+    case recruitToSquadButtonTitle = "recruitToSquad_buttonTitle"
+    case fireFromSquadButtonTitle = "fireFromSquad_buttonTitle"
     
     // MARK: - Error Messages
     case genericErrorTitle = "genericError_title"
